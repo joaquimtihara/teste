@@ -2,16 +2,22 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Dia de teste auto</title>
+  <title>Dia de Teste Auto</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #000000;
+      color: #ffffff;
     }
 
     header {
-      background-color: #004AAD;
+      background-color: #000000;
       color: white;
       text-align: center;
       padding: 20px 0;
@@ -20,48 +26,83 @@
     }
 
     .carousel-container {
-      overflow: hidden;
       width: 100%;
-      background-color: #fff;
+      overflow: hidden;
+      background-color: #000000;
+      padding: 20px 0;
     }
 
     .carousel-track {
       display: flex;
-      animation: scroll-left 20s linear infinite;
+      width: max-content;
+      animation: scroll 10s linear infinite;
     }
 
     .carousel-track img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
+      height: 200px;
+      flex-shrink: 0;
       margin-right: 20px;
     }
 
-    @keyframes scroll-left {
+    @keyframes scroll {
       0% {
         transform: translateX(0);
       }
       100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
       }
+    }
+
+    .story-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #111111;
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+
+    .story-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #ffd700;
+    }
+
+    .story-container p {
+      margin-bottom: 16px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    Dia teste auto
+    Dia de Teste Auto
   </header>
 
   <div class="carousel-container">
     <div class="carousel-track">
       <img src="download (2).jpg" alt="Imagem 1">
       <img src="Sem título.jpg" alt="Imagem 2">
-      <img src="download (2).jpg" alt="Imagem 1 repetida">
-      <img src="Sem título.jpg" alt="Imagem 2 repetida">
+      <img src="download (2).jpg" alt="Imagem 1">
+      <img src="Sem título.jpg" alt="Imagem 2">
+
+      <!-- Clones para looping perfeito -->
+      <img src="download (2).jpg" alt="Imagem 1 clone">
+      <img src="Sem título.jpg" alt="Imagem 2 clone">
+      <img src="download (2).jpg" alt="Imagem 1 clone">
+      <img src="Sem título.jpg" alt="Imagem 2 clone">
     </div>
   </div>
 
-</body>
+  <div class="story-container">
+    <h2>A Lenda de Mzuka, o Leão Vidente</h2>
+    <p>Dizem que entre as savanas douradas da África do Sul, existiu, nos anos 1990, um leão como nenhum outro. Seu nome era <strong>Mzuka</strong>, o Leão Vidente.</p>
+    <p>Mzuka não era conhecido por sua força ou rugido, mas por seu dom sobrenatural de ver o futuro. Todas as noites, ele subia até uma colina sagrada chamada Uluthu e usava uma bola de cristal deixada por um antigo xamã.</p>
+    <p>Governantes, curandeiros e líderes procuravam o oráculo para prever acontecimentos. Mzuka mostrava visões em sua bola de cristal, e seus olhos brilhavam sempre que a verdade era revelada. Dizem que ele previu a vitória de Nelson Mandela e muitas outras mudanças.</p>
+    <p>Mas ele só ajudava os puros de coração. Aos mal-intencionados, mostrava apenas névoa e um rugido aterrador. Em 1999, desapareceu sob a lua vermelha, e nunca mais foi visto. Porém, alguns ainda dizem ouvir seu rugido à noite, vindo da colina de Uluthu.</p>
+    <p><em>“Quando a África precisar novamente de sabedoria verdadeira, o leão vidente retornará.”</em></p>
+  </div>
 
+</body>
 </html>
